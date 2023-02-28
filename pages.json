@@ -1,9 +1,23 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path": "pages/index/index",
+		    "path": "pages/login/login",
+		    "style": {
+				"navigationStyle": "custom"
+			}
+		}
+		,{
+		    "path": "pages/login/forget",
+		    "style": {"navigationStyle": "custom"}
+		}
+		,{
+		    "path": "pages/login/register",
+		    "style": {"navigationStyle": "custom"}
+		} 
+		,{
+		    "path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationStyle": "custom"
 			}
 		}
         ,{
@@ -33,29 +47,49 @@
             }
             
         }
+        ,{
+            "path" : "components/tarbar/tarbar",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "components/card-chart/card-chart",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"navigationBarBackgroundColor": "#27424a"
 	},
 	"tabBar": {
 		"borderStyle": "#e8e8e8",
-		"iconWidth": "30px",
-		"height": "47px",
+		"iconWidth": "25px",
+		"height": "55px",
+		"backgroundColor": "#27424a",
+		"fontSize": "10px",
+		"color": "#ffffff",
+		"selectedColor": "#ffffff",
 		"midButton":{
-			"width": "90px",
-			"height": "80px",
-			"iconPath": "static/logo.png",
-			"iconWidth": "60px"
+			"width": "76px",
+			"height": "114px",
+			"iconPath": "static/tabs/add.png",
+			"iconWidth": "105px",
+			"text": "记一笔"
 			},
 		"list": [
 			{
-				"text": "首页",
+				"text": "账单",
 				"pagePath": "pages/index/index",
-				"iconPath": "static/tabs/home.png",
-				"selectedIconPath": "static/tabs/home-active.png"
+				"iconPath": "static/tabs/zhangdan.png",
+				"selectedIconPath": "static/tabs/zhangdan-active.png"
 			},
 			// {
 			// 	"text": "日历",
@@ -64,10 +98,10 @@
 			// 	"selectedIconPath": "static/tabs/contact-active.png"
 			// },
 			{
-				"text": "个人",
+				"text": "报表",
 				"pagePath": "pages/user/user",
-				"iconPath": "static/tabs/message.png",
-				"selectedIconPath": "static/tabs/message-active.png"
+				"iconPath": "static/tabs/baobiao.png",
+				"selectedIconPath":"static/tabs/baobiao-active.png"
 				
 			}
 		]

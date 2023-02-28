@@ -1,5 +1,6 @@
 <template>
 	<view>
+		
 	</view>
 </template>
 
@@ -12,9 +13,8 @@
 		},
 		methods: {
 			
-			}
 		}
-	
+	}
 </script>
 
 <style>
