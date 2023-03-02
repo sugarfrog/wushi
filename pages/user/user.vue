@@ -1,6 +1,6 @@
 <template>
-	<view>
-		
+	<view class="linechart">
+		<linechart></linechart>
 	</view>
 </template>
 
@@ -18,5 +18,8 @@
 </script>
 
 <style>
+	.linechart{
+		display: flex;
+	}
 
 </style>

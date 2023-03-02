@@ -1,8 +1,7 @@
 <template>
 	<view>
-		<view>
-			<linechart></linechart>
-		</view>
+		<button>1</button>
+		<button>2</button>
 	</view>
 </template>
 

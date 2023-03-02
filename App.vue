@@ -7,6 +7,7 @@
 		},
 		onLaunch: function() {
 			console.log('App Launch')
+			//自定义导航栏
 			uni.getSystemInfo({
 				success: function(e) {
 					// #ifndef MP
@@ -33,10 +34,13 @@
 			})
 			//tabbar中间按钮跳转
 			uni.onTabBarMidButtonTap(()=>{
-				uni.navigateTo({
-					url:"../rili/rili",
-					animationType:"slide-in-bottom"
-				})
+				// uni.navigateTo({
+				// 	url:"/pages/modalpop/modalpop",
+				// 	animationType:"none"
+				// })
+			uni.switchTab({
+				url:"/pages/index/subNuve/popup",
+			})	
 			})
 		},
 		onShow: function() {
