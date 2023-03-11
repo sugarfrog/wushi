@@ -26,9 +26,9 @@
 							"type": "popup",
 							"style": {
 								"position": "dock",
-								"bottom": "85px",
-								"width": "200rpx",
-								"height": "100rpx",
+								"bottom": "115px",
+								"width": "200px",
+								"height": "100px",
 								"background":"transparent",
 								"mask": "rgba(0,0,0,0.5)",
 								"zindex":99
@@ -90,7 +90,10 @@
 		},
 		{
 			"path": "pages/charge/charge",
-			 "enablePullDownRefresh": false
+			 "enablePullDownRefresh": false,
+			 "style": {
+			 	"navigationBarTitleText": "记一笔"
+			 }
 		},
 		{
 		    "path": "pages/second/second",
@@ -109,6 +112,15 @@
 				  }				              
 		     }                       
 		}
+        ,{
+            "path" : "components/charge-category/charge-category",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarBackgroundColor": "#27424a"
@@ -150,5 +162,14 @@
 			}
 		]
 	},
-	"uniIdRouter": {}
+	"uniIdRouter": {},
+	"condition": {
+		"current": 0,
+		"list": [
+			{
+				"name": "jilu",
+				"path": "pages/charge/charge"
+			}
+		]
+	}
 }

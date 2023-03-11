@@ -7,7 +7,7 @@
 					<text class="margin_stand-samll font-big wide">历史趋势</text>
 				</view>
 				<view class="right_btn">
-					<view v-for="(item,index) in historyBtn" :key="index" :class="item.state ? 'active_btn':''"
+					<view v-for="item in historyBtn"  :class="item.state ? 'active_btn':''"
 						@click="changeHistoryBtn(item.type)">{{item.name}}</view>
 				</view>
 			</view>

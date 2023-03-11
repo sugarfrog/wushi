@@ -33,14 +33,26 @@
 				}
 			})
 			//tabbar中间按钮跳转
-			uni.onTabBarMidButtonTap(()=>{
-				// uni.navigateTo({
-				// 	url:"/pages/modalpop/modalpop",
-				// 	animationType:"none"
-				// })
-			uni.switchTab({
-				url:"/pages/index/subNuve/popup",
-			})	
+			uni.onTabBarMidButtonTap((e) => {
+				let _this = this
+				// #ifdef APP-PLUS
+				// 通过 id 获取 nvue 子窗体  
+				const subNVue = uni.getSubNVueById('select')
+				// 打开 nvue 子窗体  
+				subNVue.show('none', 300, function() {
+					// 打开后进行一些操作...  
+					// 在 subNVue/vue 页面触发事件  
+					// $emit(eventName, data) 
+					uni.$emit('release', {
+						// detailId: data.id,
+						// detailUserId: data.userId,
+						// commentCount: data.commentCount
+					});
+					subNVue.setStyle({
+						left:'100px',
+					})
+				});
+				// #endif
 			})
 		},
 		onShow: function() {
@@ -53,5 +65,8 @@
 </script>
 
 <style>
+	page{
+		background-color: #f8f8f9;
+	}
 	/*每个页面公共css */
 </style>

@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<view class="bill-list">
-				<view class="bill-list-item"  v-for="bill in billList">
+				<view class="bill-list-item"  v-for="bill in localData">
 					<!-- <image></image> -->
 					
 						<view class="bill-list-name">
@@ -16,52 +16,32 @@
 						<view class="bill-list-price">
 						{{bill.price}}
 						</view>
-					
-					
-						<!-- <list> -->
-					    <!-- 注意事项: 不能使用 index 作为 key 的唯一标识 -->
-					    <!-- <cell v-for="(item, index) in dataList" :key="item.id">
-					      <text style="font-size: 10px;">{{item.name}} </text>
-						  <text style="font-size: 8px; top: 12px; text-align: left;">{{item.massage}}</text>
-						  <text style="font-size: 10px; left: 400px; color: red;">{{item.price}}</text>
-					    </cell>
-					  </list> -->
-					 
 				</view>
 		</view>
 	</view>
 </template>
 
 <script>
+	const billList = require('@/static/json/billList.json')
 	export default {
 		data() {
 			return {
-				 billList: [{name: "午饭", time: "02/01",type:"饮食",price:"-100.00"},
-				 {name: "午饭", time: "02/01",type:"饮食",price:"-100.00"},
-				 {name: "午饭", time: "02/01",type:"饮食",price:"-100.00"},
-				 {name: "午饭", time: "02/01",type:"饮食",price:"-100.00"},
-				 {name: "午饭", time: "02/01",type:"饮食",price:"-100.00"},
-				 {name: "午饭", time: "02/01",type:"饮食",price:"-100.00"},
-				 {name: "午饭", time: "02/01",type:"饮食",price:"-100.00"},
-				 {name: "午饭", time: "02/01",type:"饮食",price:"-100.00"},
-				 {name: "午饭", time: "02/01",type:"饮食",price:"-100.00"},
-				 {name: "午饭", time: "02/01",type:"饮食",price:"-100.00"},
-				 {name: "午饭", time: "02/01",type:"饮食",price:"-100.00"},
-				 ]
+				localData:billList
 			}
 		},
+		onLoad() {
+			console.log('billJson'+JSON.stringify(billList));
+		},
 		methods: {
-			
 		}
 	}
 </script>
 
 <style lang="scss" scoped>
 	.bill-list{
-		width: 90%;
 		height: 45px;
-		border-bottom: 2px #F7F7F7 ;
-		margin: 20px;
+		border-bottom: 2px #ebebeb ;
+		// margin: 20px;
 		.bill-list-item{
 			display: flex;
 			justify-content: space-between;

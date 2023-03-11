@@ -1,6 +1,5 @@
 <template>
 	<view class="card-chart">
-		<view class="card-position">
 			<view class="chart-box">
 				<view class="card-chart-text-mouth">
 					<text>2月</text>
@@ -10,7 +9,6 @@
 				</view>
 			</view>
 		</view>
-	</view>
 </template>
 
 <script>
@@ -28,17 +26,11 @@
 
 <style lang="scss" scoped>
 	.card-chart{
-		.card-position{
-			position: relative;
-			left: 22px;
-			top: 25px;
-			padding: 70px 0;
-			
 			.chart-box{
-				width: 350px;
+				width: 400px;
 				height: 164px;
 				border-radius: 27px;
-				background-color: #F7F7F7;
+				background-color: #ffffff;
 				.card-chart-text-mouth{
 					position: relative;
 					color: #70B6CD;
@@ -50,6 +42,5 @@
 			}
 		}
 		
-	}
 
 </style>

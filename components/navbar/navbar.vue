@@ -1,38 +1,26 @@
 <template>
-	<view class="navbar" >
 		<view class="navbar-fixed">
 			<!-- 状态栏 -->
 			<view :style="{height:statusBarHeight + 'px'}"></view>
-			<view class="navbar-content" >
-							<view class="navbar-search">
-								<view class="navbar-search_icon">
-									<uni-icons type="search" size="16" color="#999">
-										<view class="navbar-search_text">
-										<input  type="text" placeholder="搜索"  />	
-										</view>
-									</uni-icons>
+			    <view class="navbar-content" >
+				    <view class="bill-icon">
+				    	<image src="../../static/add/bill-book.png"></image>
+				    </view>
+					<view class="navbar-search">
+						<view class="navbar-search_icon">
+							<uni-icons type="search" size="16" color="#999">
+								<view class="navbar-search_text">
+									<input  type="text" placeholder="搜索"  />	
 								</view>
-							</view>
-							<view>
-								<view style="display: flex; position:relative; left: 140px;">
-									<image  style="height:42px ; width: 42px;  top: 0px;"src="../../static/add/account.png"></image>
-								</view>
-								<view style="display: flex; position:relative;top: 1px; left: 140px;">
-									<text style="font-size: 10px; color: aliceblue;">神奇洋辰</text>
-								</view>
-							</view>
-							<view>
-								<view style="display: flex; position:fixed; left: 23px;">
-									<image style="height:42px ; width: 42px;  top: 0px;" src="../../static/add/bill-book.png"></image>
-								</view>
-								<view style="display: flex; position:fixed;top: 86px; left: 23px;">
-									<text style="font-size: 10px; color: aliceblue;">家庭账本</text>
-								</view>
-							</view>
-							</view>
-							
+							</uni-icons>
 						</view>
 					</view>
+							
+					<view class="account-icon">
+						<image src="../../static/add/account.png"></image>
+					</view>
+				</view>
+			</view>
 </template>
 
 <script>
@@ -51,7 +39,6 @@
 								that.statusBarHeight = res.statusBarHeight; //手机状态栏高度
 								let isiOS = res.system.indexOf('iOS') > -1; //是否为iOS系统
 								that.barHeight = !isiOS ? 48 : 44; //导航栏高度，iOS：48，Android：44
-								that.barWidth = res.windowWidth - 87; //nabbar可操作宽度 = 屏幕宽度 - 小程序右上角的胶囊宽度（87）
 							}
 						})
 			},
@@ -60,7 +47,6 @@
 </script>
 
 <style lang="scss" scoped>
-	.navbar{
 		.navbar-fixed{
 			position: fixed;
 			top: 0;
@@ -75,22 +61,39 @@
 				display: flex;
 				// justify-content: center;
 				// align-items: center;
-				height: 52px;
-
+				height: 48px;
+				justify-content: space-between;
+				
+                .account-icon{
+					image{
+						height:42px ; 
+					width: 42px;  
+					top: 0px;
+					}
+					margin: 5px;
+				}
+				.bill-icon{
+					image{
+						height:42px ; 
+					width: 42px;  
+					top: 0px;
+					}
+					margin: 5px;
+				}
 				.navbar-search{
 					display: flex;
 				    // align-items: center;
-					position: relative;
+					// position: relative;
 					background-color: white;
-					left: 100px;
-					top: 13px;
-					width: 200px;
+					// left: 100px;
+					margin-top: 10px;
+					width: 260px;
 					height: 30px;
 					border-radius: 15px;
 					text-align: left;
 					
 					.navbar-search_iocn{
-						margin-right: 10px;
+						// margin-right: 10px;
 						display: flex;
 					}
 					.navbar-search_text{
@@ -119,6 +122,4 @@
 			}
 			
 		}
-		
-	}
 </style>

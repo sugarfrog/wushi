@@ -1,7 +1,12 @@
 <template>
 	<view>
-		<button>1</button>
-		<button>2</button>
+		<view class="select-boder">
+			<!-- 
+				<button @click="change">1</button>
+		<button>2</button> -->
+			
+		</view>
+		
 	</view>
 </template>
 
@@ -13,11 +18,34 @@
 			}
 		},
 		methods: {
-			
+			change(){
+				uni.navigateTo({
+					url:"/pages/charge/charge"
+				})
+			}
 		}
 	}
 </script>
 
-<style>
+<style lang="scss" scoped>
+	// .select-boder{
+		.triangle{
+		    width: 0px;
+		    height: 0px;
+		    border: 50px solid transparent;
+		    border-top-color: red;
+		}
+		
 
+		// }
+		// .select-boder::after{
+		// 	    content: '';
+		// 		width: 0;
+		// 		height: 0;
+		// 		border: 20px solid;
+		// 		position: absolute;
+		// 		bottom: -36px;
+		// 		left: 140px;
+		// 		border-color:  #fff transparent transparent;
+		// 	}
 </style>
